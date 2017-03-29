@@ -1,0 +1,36 @@
+plugin.tx_escortsite {
+	view {
+		templateRootPaths.0 = {$plugin.tx_escortsite.view.templateRootPaths.0}
+		partialRootPaths.0 = {$plugin.tx_escortsite.view.partialRootPaths.0}
+		layoutRootPaths.0 = {$plugin.tx_escortsite.view.layoutRootPaths.0}
+	}
+	#By default the following settings only will have relevance if you have fluidcontent_core extension loaded
+	settings{
+		modelListPage = {$page.content.modelListPage}
+		excludePages = {$page.menu.excludePages}
+	
+		container {
+			types {
+				default = div
+				Example = div
+			}
+		}
+	}
+}
+
+lib.fluidContent.templateRootPaths.10 = typo3conf/ext/escort_site/Resources/Private/Extensions/fluid_styled_content/Templates/
+lib.fluidContent.partialRootPaths.10 = typo3conf/ext/escort_site/Resources/Private/Extensions/fluid_styled_content/Partials/
+lib.fluidContent.layoutRootPaths.10 = typo3conf/ext/escort_site/Resources/Private/Extensions/fluid_styled_content/Layouts/
+
+
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/localization.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/resources.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/libs.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/langMenu.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/news.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/gridelements.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/translate.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/sitemap.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/onetimeaccount.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: typo3conf/ext/escort_site/Configuration/TypoScript/system/femanager.ts">

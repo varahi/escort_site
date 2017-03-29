@@ -1,0 +1,78 @@
+	.caption-style-2{
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+	}
+	.caption-style-2 li {
+		float: left;
+		padding: 0px;
+		position: relative;
+		overflow: hidden;
+		border: 1px solid #fff;
+	}
+	.caption-style-2 li:hover .caption{
+		opacity: 1;
+		transform: translateY(-100px);
+		-webkit-transform:translateY(-100px);
+		-moz-transform:translateY(-100px);
+		-ms-transform:translateY(-100px);
+		-o-transform:translateY(-100px);
+	}
+	.caption-style-2 img{
+		margin: 0px;
+		padding: 0px;
+		float: left;
+		z-index: 4;
+	}
+	.caption-style-2 .caption {
+		cursor: pointer;
+		position: absolute;
+		top: 205px !important;
+		opacity: 0;
+		top:242px;
+		-webkit-transition:all 0.4s ease-in-out;
+		-moz-transition:all 0.4s ease-in-out;
+		-o-transition:all 0.4s ease-in-out;
+		-ms-transition:all 0.4s ease-in-out;
+		transition:all 0.4s ease-in-out;
+	}
+	.caption-style-2 .blur {
+		background-color: rgba(0,0,0,0.7);
+		height: 242px;
+		width: 283px;
+		z-index: 5;
+		position: absolute;
+		height: 65px;
+		top: 0px;
+	}
+	
+	.caption-style-2 .caption-text h3 {
+		color: #fff;
+		font-size: 42px;
+		line-height: 0;
+		font-family: 'HelveticaNeueCyr-Light';
+		padding: 3px 0 0 0;
+		margin-bottom: 15px;
+	}
+	.caption-style-2 .caption-text {
+		font-family: 'HelveticaNeueCyr-Light';
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		width: 283px;
+		height: 242px;
+		text-align: center;
+		top:20px;
+		font-size: 18px;
+		margin: 0;
+		padding: 0;
+	}	
+	
+	
+.cities {
+	width: 1145px;
+	margin: 15px auto;	
+}
+.clear {
+	clear: both;
+}

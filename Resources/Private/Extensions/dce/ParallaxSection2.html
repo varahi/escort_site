@@ -1,0 +1,30 @@
+{namespace dce=ArminVieweg\Dce\ViewHelpers}
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<!-- Parallax Section -->
+<f:for each="{dce:fal(field:'image', contentObject:contentObject)}" as="fileReference" iteration="iterator">
+	<f:if condition="{iterator.isFirst}">
+
+<section class="banner bw parallax-section parallax-section-2 {field.class}" style="background-image: url('{fileReference.publicUrl}'); 
+min-height: {field.minheight}px"
+	data-speed="20" data-type="background">
+		
+	<f:if condition="{field.title}">
+		<div class="parallax-section__title parallax-section-2__title">
+			<div class="container">
+				<f:format.raw><f:format.nl2br>{field.title}</f:format.nl2br></f:format.raw>
+			</div>
+		</div>
+	</f:if>
+	<f:if condition="{field.caption}">	
+		<div class="container parallax-section__caption parallax-section-2__caption">
+			<f:format.html>{field.caption}</f:format.html>
+		</div>
+	</f:if>		
+</section>
+        
+	</f:if>
+</f:for>
+</f:section>

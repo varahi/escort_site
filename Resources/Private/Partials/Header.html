@@ -1,0 +1,28 @@
+<div id="toTop"></div>
+<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 logo">
+				<f:cObject typoscriptObjectPath="lib.logo" />
+			</div>
+			<div class="col-md-6">
+				<f:cObject typoscriptObjectPath="lib.phones" />
+			</div>			
+		</div>
+	</div>
+</header>
+<div class="top-menu__border-top"></div>
+
+<nav class="main-nav" role="navigation">
+<div class="container nav-container">
+	<div class="left-nav">
+		<f:render partial="Navigation/MainMenu" arguments="{_all}" />
+	</div>
+	<div class="right-nav">
+		<f:cObject typoscriptObjectPath="lib.accessLink" />		
+		<f:cObject typoscriptObjectPath="lib.langMenu" />
+	</div>	
+</div>
+</nav>
+<div class="top-menu__border-bottom"></div>
+<div class="top-menu__border-bottom2"></div>

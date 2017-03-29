@@ -1,0 +1,42 @@
+plugin.tx_escortsite.view {
+	templateRootPaths.0 = EXT:escort_site/Resources/Private/Templates/
+	partialRootPaths.0 = EXT:escort_site/Resources/Private/Partials/
+	layoutRootPaths.0 = EXT:escort_site/Resources/Private/Layouts/
+}
+
+template_path = typo3conf/ext/escort_site
+
+# Magnific popup
+plugin.tx_jhmagnificpopup.type.ajax.ajax.cursor = 0
+plugin.tx_jhmagnificpopup.type.ajax.closeOnBgClick = 0
+plugin.tx_jhmagnificpopup.type.ajax.closeBtnInside = 1
+plugin.tx_jhmagnificpopup.type.ajax.disableOn = 1
+plugin.tx_jhmagnificpopup.type.ajax.showCloseBtn = 1
+plugin.tx_jhmagnificpopup.type.ajax.alignTop = 0
+plugin.tx_jhmagnificpopup.type.ajax.modal = 0
+
+styles.content.loginform.pid = 0
+styles.content.textmedia.linkWrap.width = 1000m
+styles.content.textmedia.linkWrap.lightboxEnabled = 1
+styles.content.textmedia.maxW = 1000
+styles.content.textmedia.maxWInText = 1000
+
+plugin.tx_jhmagnificpopup.magnificpopup.support.tx_news = 1
+
+# FeLogin
+styles.content.loginform.pid = 16
+styles.content.loginform.templateFile = EXT:escort_site/Resources/Private/Extensions/felogin/FrontendLogin.html
+
+# News
+plugin.tx_news.settings.sitemap.startingpoint = 0
+plugin.tx_news.settings.sitemap.detailPid = 0
+
+plugin.tx_news.view.templateRootPath = EXT:escort_site/Resources/Private/Extensions/news/Templates/
+plugin.tx_news.view.layoutRootPath = EXT:escort_site/Resources/Private/Extensions/news/Layouts/
+plugin.tx_news.view.partialRootPath = EXT:escort_site/Resources/Private/Extensions/news/Partials/
+plugin.tx_news.settings.cssFile = EXT:escort_site/Resources/Public/Styles/news.css
+
+# Powermail
+plugin.tx_powermail.view.templateRootPath = EXT:escort_site/Resources/Private/Extensions/powermail/Templates/
+plugin.tx_powermail.view.partialRootPath = EXT:escort_site/Resources/Private/Extensions/powermail/Partials/
+plugin.tx_powermail.view.layoutRootPath = EXT:escort_site/Resources/Private/Extensions/powermail/Layouts/

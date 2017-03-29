@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-21T18:19:44Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+		<trans-unit id="content.meetOurModels">
+			<source>Our Models</source>
+		</trans-unit>
+		<trans-unit id="flux.banner_area">
+			<source>Banner Area</source>
+		</trans-unit>
+		<trans-unit id="flux.header_area">
+			<source>Header Area</source>
+		</trans-unit>
+		<trans-unit id="flux.header_area2">
+			<source>Header Area 2</source>
+		</trans-unit>
+		<trans-unit id="flux.main">
+			<source>Non Container Page</source>
+		</trans-unit>
+		<trans-unit id="flux.main.description">
+			<source>Non Container Page</source>
+		</trans-unit>
+		<trans-unit id="flux.main_area">
+			<source>Main Area</source>
+		</trans-unit>
+		<trans-unit id="flux.main_area2">
+			<source>Main Area 2</source>
+		</trans-unit>
+		<trans-unit id="flux.modelpage">
+			<source>Model Page</source>
+		</trans-unit>
+		<trans-unit id="flux.modelpage.description">
+			<source>Model Page</source>
+		</trans-unit>
+		<trans-unit id="flux.section1_area">
+			<source>Section1 Area</source>
+		</trans-unit>
+		<trans-unit id="flux.standard">
+			<source>Standard Page</source>
+		</trans-unit>
+		<trans-unit id="flux.standard.description">
+			<source>Standard Page</source>
+		</trans-unit>
+		<trans-unit id="news.feedbackList">
+			<source>Feedback List</source>
+		</trans-unit>
+		<trans-unit id="news.newsList">
+			<source>News List</source>
+		</trans-unit>
+		<trans-unit id="sitetitle">
+			<source></source>
+		</trans-unit>
+		</body>
+	</file>
+</xliff>

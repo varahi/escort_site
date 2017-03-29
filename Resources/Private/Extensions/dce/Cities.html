@@ -1,0 +1,24 @@
+{namespace dce=ArminVieweg\Dce\ViewHelpers}
+<f:layout name="Default" />
+
+<f:section name="main">
+	<f:for each="{field.city}" as="city">
+
+		Title: {city.title}<br />
+		Caption: {city.caption}<br />
+		Link: {city.link}<br />
+		Image: {city.image}<br />
+		
+	<f:for each="{dce:fal(field:'city.image', contentObject:contentObject)}" as="fileReference" iteration="iterator">
+		<f:if condition="{iterator.isFirst}">
+			<f:image src="{fileReference.uid}" alt="{city.title}" treatIdAsReference="1" />
+		</f:if>
+	</f:for>	
+	
+	
+<f:for each="{city.image -> dce:explode()}" as="imageUid">
+    <f:image src="file:{imageUid}"/>                        
+</f:for>
+	
+	</f:for>
+</f:section>

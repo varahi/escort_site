@@ -1,0 +1,277 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.ce-gallery img {
+		width: 100%;
+		height: auto;
+	}
+	.cities{
+		width: 100%;
+	}
+	.model-list__item {
+		width: 33%;
+	}	
+}
+
+    /* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	ul.sm-clean li {
+		border-right: none;
+		background: none;
+	}
+	.left-nav {
+  	flex: 0 0 100%;
+  	max-width: 100%;		
+	}
+	.right-nav {
+		position: absolute;
+		margin-top: 15px;
+		left: 15%;
+/*  	flex: 0 0 100%;  	*/
+  	max-width: 230px;
+  	width: 230px;
+	}	
+	.cities {
+		width: 570px;
+	}
+	.parallax-section p {
+		font-size: 32px;
+	}
+	.parallax-section-2__title {
+		font-size: 36px;
+		line-height: 38px;
+	}
+	.parallax-section-2__caption p {
+		font-size: 18px;
+	}
+	.parallax-section__caption p {
+		line-height: 24px;
+	}
+	.model-detail__parallax {
+		margin-top: 65px;
+	}
+	table {
+		width: 100%;
+	}	
+	.model-detail__logo img {
+		width: 92%
+	}
+	.model-list__item {
+		width: 50%;
+	}		
+	.model-detail__parallax-title {
+		background: none;
+		font-size: 42px;
+	} 
+	.booking-button {
+		margin-top: 50px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	.phones {
+		float: none;	
+		margin-bottom: 30px;
+		font-size: 19px !important;
+	}
+	.phones .phone1 {
+		margin-top: -10px;
+	}
+	.tx-powermail .layout1,
+	.tx-powermail .layout2,
+	.tx-powermail .layout3 {
+		flex: 0 0 100%;
+		max-width: 100%;	
+	}
+	.tx-powermail input,
+	.tx-powermail textarea {
+		width: 100% !important;
+	}
+	.radio,
+	.powermail_fieldwrap_type_radio label {
+		width: 100% !important;
+		float: none !important;
+		display: block;
+	}
+	.cities {
+		width: 290px;
+	}	
+	.main-nav {
+		color: transparent;
+	}
+	.parallax-section h3 {
+		font-size: 48px;
+		line-height: 52px;
+	}
+	.parallax-section__title {
+		background: transparent;
+	}
+	.model-detail__info {
+		width: 465px;
+		margin: 0 auto;
+	}
+	.model-detail__logo img {
+		width: 96%
+	}	
+	.model-list__item {
+		width: 100%;
+	}	
+	.button-2-container {
+		margin: 0 auto;
+	}			
+	.top-image {
+		padding-top: 100px !important;
+	}		
+	/*.tx-escortlinks img {
+		width: 100%;
+		height: auto;
+	}	*/
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 580px) {
+	.container {
+		padding: 0 15px;
+	}
+	.model-detail__info {
+		width: 230px;
+	}
+	.model-detail__logo {
+		margin-left: 1px;
+	}
+	.model-detail__logo img {
+		width: 93%	
+	}	
+	.right-nav {
+		left: 5%;
+	}	
+	.parallax-section-2__caption p {
+		font-size: 18px;
+		margin-top: 100px;
+	}	
+	.parallax-section__caption {
+		margin-top: 130px;
+	}		
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	h1,h2 {
+		font-size: 36px;
+	}
+	h3 {
+		font-size: 28px;
+	}
+	.logo img {
+		width: 100%;
+		height: auto;
+	}
+	.bottom-logo {
+		margin: 0 auto;				
+		width: 100%;
+	}
+	.bottom-logo img {
+		width: 100%;
+		height: auto;
+	}
+	.header {
+		padding: 0 10px;
+	}
+	.button {
+		width: 100%;
+	}
+	.button a {
+		padding: 10px 0;
+	}
+	.button-2-container {
+		width: 312px;
+	}
+	.button-2 {
+		width: 240px;
+	}
+	.button-2-2 {
+		width: 70px;
+	}
+	.banner-caption {
+		padding: 60px 0 0 0;
+	}
+	.button-2-container {
+		margin: 50px auto 0 auto;
+	}
+	.top-image__title {
+		font-size: 36px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 408px) {
+	.button-2-container {
+		margin: 20px auto 0 auto;
+	}
+	.banner-caption {
+		padding: 20px 0 0 0;
+		line-height: 56px;
+	}
+	.button-2-container {
+		width: 282px;
+	}
+	.button-2 {
+		width: 210px;
+	}
+	.button-2-2 {
+		width: 70px;
+	}
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+	.parallax-section__caption {
+		margin-top: 200px;
+	} 
+	.lang-menu {
+    margin-left: 85px;
+	}	    
+	ul.lang-menu li {
+		padding: 0 5px;
+	}   
+}
