@@ -35,9 +35,9 @@ page.includeJSFooter {
 }
 
 #[system = mac]
-#[browser = safari]
+#[browser = safari] || [useragent = *iPhone*]
 
-[globalVar = TSFE:id = 2] || [useragent = *iPhone*]
+[globalVar = TSFE:id = 2]
   page.includeCSS {
     css_file12 >  
   }

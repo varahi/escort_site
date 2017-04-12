@@ -327,7 +327,7 @@ a.access {
 	display: block;
 	font-family: 'HelveticaNeueCyr-Light';
 	@extend %shadow-all; 
-	@extend %background-cover;
+/*	@extend %background-cover;*/
 
 	h3 {
    	font-size: 60px;

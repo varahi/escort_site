@@ -10,7 +10,7 @@
   position: relative;    
   border-bottom: 1px solid #f3f3f3;
 	background-attachment: fixed;
-	background-position: 50% 100%;
+	background-position: 50% 50%;
 	background-repeat: no-repeat;  
 }
 .banner-caption {
@@ -35,13 +35,6 @@
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
-  
-	/*-moz-background-size: 100%; 
-  -webkit-background-size: 100%; 
-  -o-background-size: 100%; 
-  background-size: 100%; 
-  background-attachment:fixed;
-  background-repeat:no-repeat;*/
 }
 
 /* Large Devices, Wide Screens */
