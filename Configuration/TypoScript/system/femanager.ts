@@ -42,54 +42,54 @@ plugin.tx_femanager {
       }
 
       # redirect user (or admin if adminconfirmation) after profile creation (could be a PID, URL or fileadmin-Link)
-#     redirect = TEXT
-#     redirect {
-#       typolink {
-#         parameter = 1
-#         returnLast = url
-#         #linkAccessRestrictedPages = 1
-#       }
-#     }
+     redirect = TEXT
+     redirect {
+       typolink {
+         parameter = 107
+         returnLast = url
+         #linkAccessRestrictedPages = 1
+       }
+     }
 
       # redirect user after profile creation request (only if user confirmation is activated) (could be a PID, URL or fileadmin-Link)
-#     requestRedirect = TEXT
-#     requestRedirect {
-#       typolink {
-#         parameter = 1
-#         returnLast = url
-#         #linkAccessRestrictedPages = 1
-#       }
-#     }
+     requestRedirect = TEXT
+     requestRedirect {
+       typolink {
+         parameter = 107
+         returnLast = url
+         #linkAccessRestrictedPages = 1
+       }
+     }
 
       # redirect user after user clicks confirmation link in email (only if user confirmation is activated) (could be a PID, URL or fileadmin-Link)
-#     userConfirmationRedirect = TEXT
-#     userConfirmationRedirect {
-#       typolink {
-#         parameter = 1
-#         returnLast = url
-#         #linkAccessRestrictedPages = 1
-#       }
-#     }
+     userConfirmationRedirect = TEXT
+     userConfirmationRedirect {
+       typolink {
+         parameter = 12
+         returnLast = url
+         #linkAccessRestrictedPages = 1
+       }
+     }
 
       # redirect user after user clicks refuse link in confirmation email (only if user confirmation is activated) (could be a PID, URL or fileadmin-Link)
 #     userConfirmationRefusedRedirect = TEXT
 #     userConfirmationRefusedRedirect {
 #       typolink {
-#         parameter = 1
+#         parameter = 114
 #         returnLast = url
 #         #linkAccessRestrictedPages = 1
 #       }
 #     }
 
       # redirect admin after admin clicks confirmation link in email (only if admin confirmation is activated) (could be a PID, URL or fileadmin-Link)
-#     adminConfirmationRedirect = TEXT
-#     adminConfirmationRedirect {
-#       typolink {
-#         parameter = 1
-#         returnLast = url
-#         #linkAccessRestrictedPages = 1
-#       }
-#     }
+     adminConfirmationRedirect = TEXT
+     adminConfirmationRedirect {
+       typolink {
+         parameter = 12
+         returnLast = url
+         #linkAccessRestrictedPages = 1
+       }
+     }
 
       # redirect admin after admin clicks refuse link in email (only if admin confirmation is activated) (could be a PID, URL or fileadmin-Link)
 #     adminConfirmationRefusedRedirect = TEXT

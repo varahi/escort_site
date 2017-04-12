@@ -20,16 +20,29 @@ config {
   linkVars = L,type,cHash
   uniqueLinkVars = 1
   #absRefPrefix = http://{$domain}/
-  prefixLocalAnchors = all 
+  prefixLocalAnchors = all   
   
   concatenateJs = 1
   concatenateCss = 1
   compressJs = 1
   compressCss = 1  
+  
+}
+
+config {
+  typolinkLinkAccessRestrictedPages = 12
+  #typolinkLinkAccessRestrictedPages_addParams = &return_url=###RETURN_URL###
 }
 
 # Extbase exceptions
 config.contentObjectExceptionHandler = 0
+
+page.config.headerComment (
+  Dmitry Vasilev dmitry@typo3.ru.net
+  ___________________________________
+)
+
+page.shortcutIcon = favicon.ico
 
 config {
  pageTitleFirst = 1

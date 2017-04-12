@@ -103,11 +103,22 @@
 	.booking-button {
 		margin-top: 50px;
 	}
+	.button-2-container {
+		margin: 30px auto 0 auto;
+	}
 
 }
-
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.logo img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
 
 	.phones {
 		float: none;	
@@ -244,9 +255,9 @@
 }
 
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 408px) {
+@media only screen and (max-width : 420px) {
 	.button-2-container {
-		margin: 20px auto 0 auto;
+		margin: 30px auto 0 auto;
 	}
 	.banner-caption {
 		padding: 20px 0 0 0;
@@ -264,12 +275,12 @@
 }
 
 /* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 321px) {
 	.parallax-section__caption {
 		margin-top: 200px;
 	} 
 	.lang-menu {
-    margin-left: 85px;
+    margin-left: 95px;
 	}	    
 	ul.lang-menu li {
 		padding: 0 5px;

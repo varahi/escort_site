@@ -28,12 +28,12 @@ lib.accessLink {
   }
 }
 
-
 [usergroup = *]
 lib.accessLink >
 lib.accessLink = COA
 lib.accessLink {
-  wrap = <div class="login-links">|</div>
+  #wrap = <div class="login-links">|</div>
+  wrap = |
   5 = TEXT
   5.data = TSFE:fe_user|user|username
   5.wrap = |
@@ -43,13 +43,15 @@ lib.accessLink {
   10.value = {$page.header.profileText}
   10.stdWrap.typolink.parameter = {$page.header.profileLink}
   10.stdWrap.wrap = |
+  5 >
   10 >
   20 = TEXT
   20 {
     wrap = |
     value= Logout
     lang.de = {$page.header.logout}
-    typolink.parameter = 20
+    typolink.parameter = 12
+    typolink.ATagParams = class="access" 
     #typolink.parameter.data = page:uid
     typolink.additionalParams.cObject = COA
     typolink.additionalParams.cObject {
@@ -59,7 +61,6 @@ lib.accessLink {
       20.data = GP : L
       20.wrap = &L=|
       20.required = 1
-      20.stdWrap.typolink.ATagParams = class="access"  
     }
   }
 }
@@ -95,7 +96,8 @@ lib.topImage {
       import.data = levelmedia: -1,slide
       import.listNum = 0
       import.override.field = media
-      width = 1920c 
+      width = 1920c
+      #minHeight = 900c 
       format = jpg
       quality = 100     
     }
@@ -136,4 +138,15 @@ lib.copyright = TEXT
 lib.copyright {
   wrap = <div class="copyright">|</div>
   value = {$page.footer.copyright}  
+}
+
+lib.footerLinks >
+lib.footerLinks = COA
+lib.footerLinks {
+  wrap = <div class="legal">|</div>
+  10 = TEXT
+  10 {  
+    stdWrap.wrap = |
+    stdWrap.typolink.parameter = 115
+  }
 }

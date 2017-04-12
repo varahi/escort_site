@@ -18,17 +18,32 @@ page.includeCSS {
 
   css_file99 = {$template_path}/Resources/Public/Styles/rte.css
   css_file100 = {$template_path}/Resources/Public/Styles/media_queries.css 
+  css_file101 = {$template_path}/Resources/Public/Styles/banners.css 
 }
 
 # Jquery
-page.includeJS {
-  js_file1 = https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js
-  js_file2 = {$template_path}/Resources/Public/Javascript/bootstrap.min.js
+page.includeJSFooter {
+  #js_file1 = https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js
+  #js_file2 = {$template_path}/Resources/Public/Javascript/bootstrap.min.js
   js_file3 = {$template_path}/Resources/Public/Javascript/jquery.smartmenus.js
-  js_file4 = {$template_path}/Resources/Public/Javascript/parallax.min.js
+  #js_file4 = {$template_path}/Resources/Public/Javascript/parallax.min.js
   #js_file5 = {$template_path}/Resources/Public/Javascript/jquery.maskedinput.min.js 
   #js_file6 = {$template_path}/Resources/Public/Javascript/jquery.lazy.min.js 
   js_file7 = {$template_path}/Resources/Public/Javascript/jquery.viewportchecker.min.js 
-  js_file8 = {$template_path}/Resources/Public/Javascript/pace.min.js   
+  #js_file8 = {$template_path}/Resources/Public/Javascript/pace.min.js   
   js_file50 = {$template_path}/Resources/Public/Javascript/main.js
 }
+
+#[system = mac]
+#[browser = safari]
+
+[globalVar = TSFE:id = 2] || [useragent = *iPhone*]
+  page.includeCSS {
+    css_file12 >  
+  }
+  page.includeJSFooter {
+  	js_file7 >
+    js_file50 >
+    js_file50 = {$template_path}/Resources/Public/Javascript/main_light.js  
+  }
+[global]

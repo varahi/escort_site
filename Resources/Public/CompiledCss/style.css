@@ -1,5 +1,5 @@
 /* Main SCSS style */
-.parallax-section, .tx-felogin-pi1, .tx-onetimeaccount-pi1, .model-detail__img-wrap img.model {
+.parallax-section, .tx-felogin-pi1, .tx-onetimeaccount-pi1, .tx-femanager, .model-detail__img-wrap img.model {
   box-shadow: 0 0 6px 6px #d4d4d4;
   -moz-box-shadow: 0 0 6px 6px #d4d4d4; }
 
@@ -15,7 +15,7 @@ a.access {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#cdcdcd',GradientType=0);
   /* IE6-9 */ }
 
-.button, .tx-powermail .powermail_submit, .tx-felogin-pi1 form input[type="submit"], .tx-onetimeaccount-pi1 form input[type="submit"], #filter a.current {
+.button, .tx-powermail .powermail_submit, .tx-felogin-pi1 form input[type="submit"], .tx-onetimeaccount-pi1 form input[type="submit"], .tx-femanager form input[type="submit"], #filter a.current {
   background: #323232;
   /* Old browsers */
   background: -moz-linear-gradient(top, #323232 0%, #2a2a2a 30%, #191919 71%, #111 100%);
@@ -26,6 +26,13 @@ a.access {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#323232', endColorstr='#111111',GradientType=0);
   /* IE6-9 */ }
+
+.parallax-section {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%; }
 
 .bw {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -253,44 +260,12 @@ a.access {
   background: #f3f3f3 url(../Images/bg-button-2.png) 0 0 no-repeat; }
 /* Banners
  --------------------------------------------------*/
-.banner {
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  max-height: 600px;
-  min-height: 600px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1920px;
-  position: relative;
-  border-bottom: 1px solid #f3f3f3; }
-
-.banner-caption {
-  text-align: center;
-  font-family: 'HelveticaNeueCyr-Light';
-  font-size: 48px;
-  padding: 160px 0 0 0;
-  /*display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;*/ }
-
 .banner-bottom1 {
   border: 1px solid #c2c2c2;
   height: 1px; }
 
 .banner-bottom2 {
   border-bottom: 1px solid #f1f1f1; }
-
-.banner-responsive {
-  /*	-moz-background-size: 100%; 
-   -webkit-background-size: 100%; 
-   -o-background-size: 100%; 
-   background-size: 100%; 	*/
-  /*  -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;*/ }
 
 .parallax-section {
   margin-top: 40px;
@@ -466,16 +441,6 @@ table {
     float: right;
     margin: 0 1.5% 0 0; }
 
-ul.parsley-errors-list {
-  padding: 0;
-  margin: 0; }
-
-li.parsley-custom-error-message, li.parsley-required {
-  color: #f00;
-  list-style: none;
-  margin-top: -10px;
-  margin-bottom: 10px; }
-
 .contacts {
   margin-top: 20px; }
 
@@ -483,10 +448,31 @@ li.parsley-custom-error-message, li.parsley-required {
   font-family: 'HelveticaNeueCyr-Light';
   font-size: 18px;
   margin-top: 0px; }
-  /* Felogin
-   --------------------------------------------------*/
+  /* Mail error */
 
-.tx-felogin-pi1, .tx-onetimeaccount-pi1 {
+.text-area ul.parsley-errors-list {
+  padding: 0;
+  margin: 0; }
+
+.text-area ul li.parsley-required::before, .text-area ul li.parsley-custom-error-message:before {
+  position: relative;
+  top: 5px;
+  content: '';
+  color: #848484;
+  font-size: 0;
+  line-height: 16px;
+  width: 0;
+  height: 0; }
+
+.text-area li.parsley-custom-error-message, .text-area li.parsley-required {
+  color: #f00 !important;
+  list-style: none !important;
+  margin-top: -10px !important;
+  margin-bottom: 10px !important;
+  background: none !important; }
+/* Felogin
+ --------------------------------------------------*/
+.tx-felogin-pi1, .tx-onetimeaccount-pi1, .tx-femanager {
   margin: 15px 0;
   display: flex;
   flex-wrap: wrap;
@@ -502,15 +488,16 @@ li.parsley-custom-error-message, li.parsley-required {
   -khtml-border-radius: 10px;
   border-radius: 10px;
   min-height: 280px; }
-  .tx-felogin-pi1 h3, .tx-onetimeaccount-pi1 h3 {
+  .tx-felogin-pi1 h3, .tx-onetimeaccount-pi1 h3, .tx-femanager h3 {
     font-family: 'HelveticaNeueCyr-Light';
     font-size: 36px;
-    color: #000; }
-  .tx-felogin-pi1 form, .tx-onetimeaccount-pi1 form {
+    color: #000;
+    text-align: left; }
+  .tx-felogin-pi1 form, .tx-onetimeaccount-pi1 form, .tx-femanager form {
     flex: 0 0 100%;
     max-width: 100%;
     align-items: center; }
-    .tx-felogin-pi1 form input[type="text"], .tx-onetimeaccount-pi1 form input[type="text"], .tx-felogin-pi1 form input[type="password"], .tx-onetimeaccount-pi1 form input[type="password"] {
+    .tx-felogin-pi1 form input[type="text"], .tx-onetimeaccount-pi1 form input[type="text"], .tx-femanager form input[type="text"], .tx-felogin-pi1 form input[type="password"], .tx-onetimeaccount-pi1 form input[type="password"], .tx-femanager form input[type="password"] {
       width: 100%;
       height: 45px;
       margin-bottom: 18px;
@@ -520,7 +507,7 @@ li.parsley-custom-error-message, li.parsley-required {
       -khtml-border-radius: 3px;
       border-radius: 3px;
       text-indent: 15px; }
-    .tx-felogin-pi1 form input[type="submit"], .tx-onetimeaccount-pi1 form input[type="submit"] {
+    .tx-felogin-pi1 form input[type="submit"], .tx-onetimeaccount-pi1 form input[type="submit"], .tx-femanager form input[type="submit"] {
       color: #fff;
       font-family: 'HelveticaNeueCyr-Light';
       font-size: 20px;
@@ -532,12 +519,35 @@ li.parsley-custom-error-message, li.parsley-required {
       padding: 5px 25px;
       float: right;
       cursor: pointer; }
-  .tx-felogin-pi1 .error, .tx-onetimeaccount-pi1 .error {
+  .tx-felogin-pi1 .error, .tx-onetimeaccount-pi1 .error, .tx-femanager .error {
     color: #f00;
     margin-bottom: 10px; }
+  .tx-felogin-pi1 .alert-error button.close, .tx-onetimeaccount-pi1 .alert-error button.close, .tx-femanager .alert-error button.close, .tx-felogin-pi1 h4, .tx-onetimeaccount-pi1 h4, .tx-femanager h4 {
+    display: none; }
 
 .tx-onetimeaccount-pi1 h3 {
   text-align: left; }
+
+.femanager_new {
+  width: 100%; }
+
+.tx-femanager {
+  /*
+   label {
+   display: inline-block;
+   float: left;
+   width: 40%;
+   }
+   input[type="text"],
+   input[type="password"]  {
+   margin-left: 40%;
+   float: left;
+   width: 60% !important;			
+   display: inline-block !important;	
+   }
+   */ }
+  .tx-femanager h3 {
+    margin-bottom: 5px; }
 /* News
  --------------------------------------------------*/
 .feedback-list__description {
@@ -674,17 +684,6 @@ li.parsley-custom-error-message, li.parsley-required {
     line-height: 40px;
     color: #fff;
     margin-top: 20px; }
-
-.cover-image {
-  background-position: 50% 50% !important;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
-  /*-moz-background-size: 100%; 
-   -webkit-background-size: 100%; 
-   -o-background-size: 100%; 
-   background-size: 100%; */ }
 
 .booking-button {
   margin-top: 120px; }
@@ -907,3 +906,18 @@ li.parsley-custom-error-message, li.parsley-required {
 
 .social__twitter:hover {
   background: url(../Images/icons/icon-twitter-hover.png) 50% 50% no-repeat; }
+
+.legal {
+  margin-left: 5px; }
+/* 
+ .lightwidget__caption {
+ display: none !important;
+ border: 1px solid red !important;
+ }
+ .lightwidget__column {
+ border: 1px solid red !important;
+ }
+ .lightwidget__photo {
+ border: 1px solid red !important;	
+ }
+ */

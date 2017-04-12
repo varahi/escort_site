@@ -7,9 +7,33 @@
 	padding: 20px 0;
 }
 
+ul.parsley-errors-list {
+	padding: 0;
+	margin: 0;
+}
+li.parsley-custom-error-message,
+li.parsley-required {
+	color: #ff0000 !important;
+	list-style: none;
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
 
+.ce-bodytext p.align-center,
+.container .align-center p{
+	font-family: 'HelveticaNeueCyr-Light' !important;
+	font-size: 16px !important;
+	color: #1a1a1a !important;	
+	line-height: 1.5 !important;
+}   
+
+.timeline-Widget {
+	
+}
+   
 
 /* Pace */
+/*
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -194,7 +218,6 @@
 .pace .pace-progress[data-progress-text="99%"]:after { right: -15.86px }
 .pace .pace-progress[data-progress-text="100%"]:after { right: -14px }
 
-
 .pace .pace-activity {
   position: absolute;
   width: 100%;
@@ -207,3 +230,4 @@
 .pace.pace-inactive {
   display: none;
 }
+*/

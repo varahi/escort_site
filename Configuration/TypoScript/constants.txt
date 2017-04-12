@@ -40,3 +40,25 @@ plugin.tx_news.settings.cssFile = EXT:escort_site/Resources/Public/Styles/news.c
 plugin.tx_powermail.view.templateRootPath = EXT:escort_site/Resources/Private/Extensions/powermail/Templates/
 plugin.tx_powermail.view.partialRootPath = EXT:escort_site/Resources/Private/Extensions/powermail/Partials/
 plugin.tx_powermail.view.layoutRootPath = EXT:escort_site/Resources/Private/Extensions/powermail/Layouts/
+
+#Femanager
+#plugin.tx_femanager.settings.adminEmail = varahi@yandex.ru
+plugin.tx_femanager.persistence.storagePid = 16
+plugin.tx_femanager.view.layoutRootPath = EXT:escort_site/Resources/Private/Extensions/femanager/Layouts/
+plugin.tx_femanager.view.partialRootPath = EXT:escort_site/Resources/Private/Extensions/femanager/Partials/
+plugin.tx_femanager.view.templateRootPath = EXT:escort_site/Resources/Private/Extensions/femanager/Templates/
+plugin.tx_femanager.settings.adminName = Escort for pleasure admin
+
+#Seo
+plugin.tx_csseo.sitemap.pages.languageUids = 0,1
+plugin.tx_csseo.sitetitle = LLL:EXT:escort_site/Resources/Private/Language/locollang.xlf:sitetitle
+plugin.tx_csseo.hreflang.enable = 0
+plugin.tx_csseo.hreflang.keys = en,de
+plugin.tx_csseo.sitemap.extensions.news.storagePid = 11
+plugin.tx_csseo.sitemap.extensions.news.detailPid = 10
+plugin.tx_csseo.sitemap.extensions.news.languageUids = 0,1
+plugin.tx_csseo.hreflang.ids = 0,1
+plugin.tx_csseo.sitemap.additional = sitemap.xml
+plugin.tx_csseo.social.defaultImage = fileadmin/assets/girl2.jpg
+plugin.tx_csseo.social.openGraph.image.height = 630c
+plugin.tx_csseo.social.twitter.defaultImage = fileadmin/assets/girl2.jpg

@@ -1,15 +1,13 @@
-// SmartMenus init
-$(function() {
-  $('#main-menu').smartmenus({
-    mainMenuSubOffsetX: -1,
-    mainMenuSubOffsetY: 4,
-    subMenusSubOffsetX: 6,
-    subMenusSubOffsetY: -6
-  });
-});
-
 // SmartMenus mobile menu toggle button
 $(function() {
+  // SmartMenus init
+  $('#main-menu').smartmenus({
+	  mainMenuSubOffsetX: -1,
+	  mainMenuSubOffsetY: 4,
+	  subMenusSubOffsetX: 6,
+	  subMenusSubOffsetY: -6
+  });		
+	
   var $mainMenuState = $('#main-menu-state');
   if ($mainMenuState.length) {
     // animate mobile menu
@@ -29,34 +27,37 @@ $(function() {
     });
   }
 });
-		
 
-// Parallax
+//Parallax
 $(document).ready(function(){
-	// Кешируем объект окна
 	$window = $(window);               
    $('section[data-type="background"]').each(function(){
      var $bgobj = $(this); // Назначаем объект                  
       $(window).scroll(function() {                   
-		// Прокручиваем фон со скоростью var.
-		// Значение yPos отрицательное, так как прокручивание осуществляется вверх!
 		var yPos = -($window.scrollTop() / $bgobj.data('speed')); 		
-		// Размещаем все вместе в конечной точке
 		var coords = '50% '+ yPos + 'px';
-		// Смещаем фон
 		$bgobj.css({ backgroundPosition: coords });	
       }); 
    });	
 }); 
-/* 
- * Создаем элементы HTML5 для IE
- */
 
 document.createElement("article");
 document.createElement("section");
 
-// To top
+//function checkSize(){
+//  if ( $(window).width() > 992 ){
+//		// Do some
+//  } else {
+//  	// Do nothing
+//  }
+//}
+
 $(document).ready(function() {
+	// Diasble right click menu
+    $(this).bind("contextmenu", function(e) {
+        e.preventDefault();
+    });		
+	
 	// To Top	
 	$(window).scroll(function() {
 		if($(this).scrollTop() != 0) {
@@ -77,12 +78,14 @@ $(document).ready(function() {
   	offset: 150
   });	
   jQuery('.parallax-section__title').addClass("visible").viewportChecker ({
-  	classToAdd: 'visible animated fadeInLeft',
+	  classToAdd: 'visible animated fadeIn',
+	  //classToAdd: 'visible animated fadeInLeft',
   	offset: 150
   });	
   jQuery('.parallax-section__caption').addClass("visible").viewportChecker ({
-	  	classToAdd: 'visible animated fadeInRight',
-	  	offset: 150
+	  classToAdd: 'visible animated fadeIn',	
+	  //classToAdd: 'visible animated fadeInRight',
+	  offset: 150
   });	  
   jQuery('.news-list-view, #c40').addClass("visible").viewportChecker ({
 	  	classToAdd: 'visible animated zoomIn',
@@ -91,28 +94,14 @@ $(document).ready(function() {
   
 });
 
+// Filter for models category 
+var chosen = "";
+jQuery("#filter a").on("click", function (event) {
+    jQuery("#filter a").removeClass("current");
+    jQuery(this).addClass("current");
+    chosen = jQuery(this).attr("rel");
+    jQuery(".model-list__item").not("." + chosen).hide('slow');
+    jQuery("." + chosen).show('slow');
 
-
-
-//bg
-/*
-$(window).load(function() {    
-    var theWindow        = $(window),
-        $bg              = $(".test"),
-        aspectRatio      = $bg.width() / $bg.height();
-    function resizeBg() {
-            if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
-                $bg
-                    .removeClass()
-                    .addClass('bgheight');
-            } else {
-                $bg
-                    .removeClass()
-                    .addClass('bgwidth');
-            }
-    }
-    theWindow.resize(function() {
-            resizeBg();
-    }).trigger("resize");
-}); 
-*/
+});
+var $items = jQuery('.model-list__item');

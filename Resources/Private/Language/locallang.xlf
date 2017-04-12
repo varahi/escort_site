@@ -53,6 +53,23 @@
 		<trans-unit id="sitetitle">
 			<source></source>
 		</trans-unit>
+		
+		<trans-unit id="femanager.requestPassword">
+			<source>Request password</source>
+		</trans-unit>	
+		<trans-unit id="femanager.email">
+			<source>E-mail *</source>
+		</trans-unit>		
+		<trans-unit id="femanager.password">
+			<source>Password *</source>
+		</trans-unit>			
+		<trans-unit id="femanager.repeatPassword">
+			<source>Repeat password *</source>
+		</trans-unit>	
+		<trans-unit id="femanager.submitCreate">
+			<source>Submit</source>
+		</trans-unit>								
+			
 		</body>
 	</file>
 </xliff>

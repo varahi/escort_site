@@ -32,6 +32,13 @@ $white: #ffffff;
 	background: linear-gradient(to bottom,  #323232 0%,#2a2a2a 30%,#191919 71%,#111111 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#323232', endColorstr='#111111',GradientType=0 ); /* IE6-9 */
 }
+%background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;	
+}
 
 @mixin border-radius($value) {
   -moz-border-radius: $value;
@@ -222,7 +229,7 @@ a.access {
 	}
 }
    
-   
+  
 .text-area {
 	a {
 		color: #000;
@@ -305,28 +312,6 @@ a.access {
 /* Banners
  --------------------------------------------------*/
 
-.banner { 
-	background-attachment: fixed;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	max-height: 600px; 
-	min-height: 600px;  
-	margin: 0 auto; 
-  width: 100%; 
-  max-width: 1920px; 
-  position: relative;    
-  border-bottom: 1px solid #f3f3f3;
-}
-.banner-caption {
-	text-align: center;
-	font-family: 'HelveticaNeueCyr-Light';
-	font-size: 48px;
-	padding: 160px 0 0 0;
-	/*display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;*/ 	
-}
 .banner-bottom1 {
 	border: 1px solid #c2c2c2;
 	height: 1px;
@@ -335,17 +320,6 @@ a.access {
 	border-bottom: 1px solid #f1f1f1;
 }
 
-.banner-responsive {
-/*	-moz-background-size: 100%; 
-  -webkit-background-size: 100%; 
-  -o-background-size: 100%; 
-  background-size: 100%; 	*/
-
-  /*  -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-     background-size: cover;*/
-}
 .parallax-section {
 	margin-top: 40px;
 	border-top: 1px solid $white;
@@ -353,6 +327,7 @@ a.access {
 	display: block;
 	font-family: 'HelveticaNeueCyr-Light';
 	@extend %shadow-all; 
+	@extend %background-cover;
 
 	h3 {
    	font-size: 60px;
@@ -589,18 +564,6 @@ table {
 	}
 }
 
-ul.parsley-errors-list {
-	padding: 0;
-	margin: 0;
-}
-li.parsley-custom-error-message,
-li.parsley-required {
-	color: #ff0000;
-	list-style: none;
-	margin-top: -10px;
-	margin-bottom: 10px;
-}
-
 .contacts {
 	margin-top: 20px;
 }
@@ -613,15 +576,43 @@ li.parsley-required {
 	}
 }
 
+/* Mail error */
+.text-area  ul.parsley-errors-list {
+	padding: 0;
+	margin: 0;
+}
+
+.text-area ul li.parsley-required::before,
+.text-area ul li.parsley-custom-error-message:before {
+	position: relative;
+  top: 5px;
+  content: '';
+  color: #848484;
+  font-size: 0;
+  line-height: 16px;
+  width: 0;
+  height: 0;
+}    
+.text-area  li.parsley-custom-error-message,
+.text-area  li.parsley-required {
+	color: #ff0000 !important;
+	list-style: none !important;
+	margin-top: -10px !important;
+	margin-bottom: 10px !important;
+	background: none !important;
+}
+
 /* Felogin
  --------------------------------------------------*/
 .tx-felogin-pi1,
-.tx-onetimeaccount-pi1 {
+.tx-onetimeaccount-pi1,
+.tx-femanager {
 	margin: 15px 0;
 	h3 {
 		font-family: 'HelveticaNeueCyr-Light';
 		font-size: 36px;
 		color: $black;
+		text-align: left;
 	}
 	display: flex;
 	flex-wrap: wrap;	
@@ -666,12 +657,39 @@ li.parsley-required {
 		color: #ff0000;
 		margin-bottom: 10px;
 	}	
+	.alert-error button.close,
+	h4 {
+		display: none;
+	}
 }
 
 .tx-onetimeaccount-pi1 {
 	h3 {
 		text-align: left;
 	}
+}
+.femanager_new {
+	width: 100%;
+}
+
+.tx-femanager {
+	h3 {
+		margin-bottom: 5px;
+	}
+	/*
+	label {
+		display: inline-block;
+		float: left;
+		width: 40%;
+	}
+	input[type="text"],
+	input[type="password"]  {
+		margin-left: 40%;
+		float: left;
+		width: 60% !important;			
+		display: inline-block !important;	
+	}
+	*/
 }
 
 /* News
@@ -858,18 +876,6 @@ li.parsley-required {
 	}
 }
 
-.cover-image {
-	background-position: 50% 50% !important;
-	-webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
-  
-	/*-moz-background-size: 100%; 
-  -webkit-background-size: 100%; 
-  -o-background-size: 100%; 
-  background-size: 100%; */
-}
 .booking-button {
 	margin-top: 120px;
 }
@@ -1129,3 +1135,20 @@ transition: background-image 0.5s ease-in-out;
 .social__twitter:hover {
 	background: url(../Images/icons/icon-twitter-hover.png) 50% 50% no-repeat; 
 }
+
+.legal {
+	margin-left: 5px;
+}
+ 
+ /* 
+.lightwidget__caption {
+  display: none !important;
+  border: 1px solid red !important;
+}
+.lightwidget__column {
+  border: 1px solid red !important;
+}
+.lightwidget__photo {
+  border: 1px solid red !important;	
+}
+*/

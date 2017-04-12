@@ -23,7 +23,6 @@ config.sys_language_mode = content_overlay
 #config.sys_language_overlay = hideNonTranslated
  
 [globalVar = GP:L = 0]
-config.sys_language_mode = content_overlay
 config {
   linkVars = L,type,cHash
   uniqueLinkVars = 1
@@ -37,7 +36,6 @@ config {
 [global]
 
 [globalVar = GP:L = 1]
-config.sys_language_mode = content_overlay
 config.language = de
 config.locale_all = de_DE
 config.htmlTag_langKey = de
@@ -65,8 +63,8 @@ page.meta {
   local_all           = de_DE
   language            = de
   #author              = {$page.meta.autor}  
-  #robots              = index,follow
-  robots               = noindex,nofollow
+  robots              = index,follow
+  #robots               = noindex,nofollow
   viewport             = width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes
   #MSSmartTagsPreventParsing = true
   SKYPE_TOOLBAR        = SKYPE_TOOLBAR_PARSER_COMPATIBLE
@@ -126,3 +124,5 @@ page.meta {
     language            = en
   }  
 [global]
+
+
